@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="jpa_sesion2" transaction-type="RESOURCE_LOCAL"> <!-- AQUI LE AGREGE RESOURCE_LOCAL -->
+	
+		<!-- Agrego la clase que voy a manejar en este proyecto -->
+		<class>model.Usuario</class>
+
+
+		<!-- ESTE CODIGO ES PARA LA CONEXION A MI BASE DE DATOS -->
+		<properties>
+			<!-- MySQL -->
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/BD_PACOMPIA?serverTimezone=UTC" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="Eduardo123@" />
+			<!-- Manejador Hibernate -->
+			<property name="hibernate.hbm2ddl.auto" value="update" /> <!-- aqui le pongo update porque si pongo create se borrara lo que ya hay en la tabla y eso no quiero -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
