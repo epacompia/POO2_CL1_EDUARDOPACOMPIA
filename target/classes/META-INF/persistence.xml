@@ -3,10 +3,10 @@
 	xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	<persistence-unit name="jpa_sesion2" transaction-type="RESOURCE_LOCAL"> <!-- AQUI LE AGREGE RESOURCE_LOCAL -->
+	<persistence-unit name="LPII_T1_PACOMPIALOPEZ" transaction-type="RESOURCE_LOCAL"> <!-- AQUI LE AGREGE RESOURCE_LOCAL -->
 	
 		<!-- Agrego la clase que voy a manejar en este proyecto -->
-		<class>model.Usuario</class>
+		<class>model.Atencion</class>
 
 
 		<!-- ESTE CODIGO ES PARA LA CONEXION A MI BASE DE DATOS -->
